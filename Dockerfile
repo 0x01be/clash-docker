@@ -15,8 +15,8 @@ FROM 0x01be/alpine:edge
 
 COPY --from=builder /root/.local/bin/ /opt/clash/bin/
 
-#RUN apk add --no-cache --virtual clash-runtime-dependencies \
-#    gmp
+RUN apk add --no-cache --virtual clash-runtime-dependencies \
+    gmp
 
 ENV PATH $PATH:/opt/clash/bin/
 
