@@ -15,6 +15,7 @@ FROM 0x01be/alpine:edge
 ENV GHC_VERSION 8.10.1
 
 COPY --from=builder /opt/ghc/ /opt/ghc/
+COPY --from=builder /opt/cabal/ /opt/cabal/
 COPY --from=builder /root/.local/bin/ /opt/clash/bin/
 
 RUN apk add --no-cache --virtual clash-runtime-dependencies \
