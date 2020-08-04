@@ -22,7 +22,7 @@ RUN apk add --no-cache --virtual clash-runtime-dependencies \
     gmp \
     ncurses
 
-ENV PATH $PATH:/opt/ghc/bin/:/opt/clash/bin/
+ENV PATH $PATH:/opt/ghc/bin/:/opt/cabal/bin/:/opt/clash/bin/
 
 RUN ln -s /opt/ghc/bin/ghc /opt/ghc/bin/ghc-$GHC_VERSION
 
