@@ -7,7 +7,7 @@ RUN git clone --depth 1 https://github.com/clash-lang/clash-compiler /clash
 
 WORKDIR /clash
 
-RUN stack --resolver nightly-2020-08-02 install
+RUN stack --resolver nightly-2020-08-10 --system-ghc install
 
 FROM alpine
 
